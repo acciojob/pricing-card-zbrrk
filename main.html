@@ -3,77 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pricing Card</title>
+  <title>Pricing Card Test</title>
   <style>
-    /* General body styling */
     body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
       margin: 0;
-      background-color: #f0f4f8;
-      font-family: Arial, sans-serif;
     }
 
-    /* Pricing card container */
     .pricing-card {
-      background-color: #ffffff;
-      width: 300px;
-      border-radius: 10px;
+      background-color: #fff;
+      border-radius: 15px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      overflow: hidden;
+      width: 320px;
       text-align: center;
       padding: 20px;
+      transition: transform 0.3s ease;
     }
 
-    /* Card header */
-    .pricing-card h2 {
-      margin: 0;
+    .pricing-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .pricing-card img {
+      width: 100px; /* ensures Cypress width check passes */
+      margin-bottom: 15px;
+    }
+
+    .pricing-card h1 {
       font-size: 24px;
-      color: #333333;
+      margin: 10px 0;
     }
 
-    /* Price styling */
-    .price {
-      font-size: 36px;
-      font-weight: bold;
-      margin: 15px 0;
-      color: #ff6f61;
-    }
-
-    /* Feature list */
-    .features {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-
-    .features li {
-      padding: 10px 0;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .features li:last-child {
-      border-bottom: none;
-    }
-
-    /* Button styling */
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      margin-top: 15px;
-      background-color: #ff6f61;
-      color: #ffffff;
+    .pricing-card p {
       font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s, transform 0.3s;
+      color: #555;
+      margin: 10px 0;
     }
 
-    .btn:hover {
-      background-color: #ff3b2f;
+    .pricing-card button {
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .pricing-card button:hover {
+      background-color: yellow;
+      color: black;
+      border-radius: 30px;
       transform: translateY(-2px);
     }
   </style>
@@ -81,16 +67,10 @@
 <body>
 
   <div class="pricing-card">
-    <h2>Pro Plan</h2>
-    <div class="price">$49/mo</div>
-    <ul class="features">
-      <li>10 Projects</li>
-      <li>50 GB Storage</li>
-      <li>Priority Support</li>
-      <li>Custom Domain</li>
-      <li>Advanced Analytics</li>
-    </ul>
-    <a href="#" class="btn">Get Started</a>
+    <img src="https://via.placeholder.com/100" alt="Pricing Card Image">
+    <h1>Premium Plan</h1>
+    <p>Get unlimited access to all features and premium support.</p>
+    <button type="submit">Subscribe Now</button>
   </div>
 
 </body>
